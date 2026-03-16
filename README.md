@@ -26,3 +26,11 @@
 - I do not know how to return the stack in the string format, so I utilised the StringBuilder collection and implemented the same logic and returned it as a string.
 - Edge case was resolved by removing the leading zeros using a simple loop check at result[0].
 - There might be more edge cases for the problem, but I have written the solution using the available example inputs.
+
+### Solution 3
+- The approach was to create a hashmap and map each pattern character with its respective string word.
+- If the pattern character is already in the map, then check if the current word is the same word as in the map, else return false.
+- The tricky part is to ensure the one-one property stays true, hence we need to have another Hashmap that keeps track of mapping the string word with the pattern character too.
+- If the string word is already in the map, then check if the current character is the same character as in the map, else return false.
+- If all the conditions pass, return true.
+- Edge case is to check if the pattern array length is the same as word array length.

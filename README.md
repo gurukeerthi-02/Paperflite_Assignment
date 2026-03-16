@@ -19,4 +19,10 @@
 - Next, iterate the keys of the hashmap and check if any eky has only 1 count of occurrence value and return that key back.
 - Optimized approach was to create a result = 0 variable and iterate each value and XOR them to with the result and return the result.
 
-
+### Solution 2
+- The approach was to use Stack based concept and try to find the smallest possible value.
+- The value will be pushed to stack until the top of the stack is lesser than the current value.
+- If the top of the stack is greater than current value, the top will be removed until the top of the stack is lesser than the current value and push the current value to stack.
+- I do not know how to return the stack in the string format, so I utilised the StringBuilder collection and implemented the same logic and returned it as a string.
+- Edge case was resolved by removing the leading zeros using a simple loop check at result[0].
+- There might be more edge cases for the problem, but I have written the solution using the available example inputs.
